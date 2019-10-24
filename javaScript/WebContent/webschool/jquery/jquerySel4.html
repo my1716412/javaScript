@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {         
+                // $("#1").click(function() {
+                //     $("[href]").hide();
+                // })           
+                // $("#2").click(function() {
+                //     $("[href]").show();
+                // })    
+                $("button:first").click(function () {
+                //  $("a[target != '_blank']").hide();    
+                //$("a[href^=https]").hide();     
+                $("a[href$=com]").hide();     
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <button id="1">Hide</button>
+    <button id="2">Show</button>
+    <p>a paragraph</p>
+    <p>another paragraph</p>
+    <p><a href="https://www.daum.net" target="_blank">Daum</a></p>
+    <p><a href="http://www.naver.com" taget="parnet">Naver</a></p>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+        style="background-color: red; width: 120px; height: 20px; padding: 40px;">MouseOver</div>
+    <br>
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+        style="background-color: red; width: 120px; height: 20px; padding: 40px;">Click</div>
+    <br>
+    Name: <input onfocus="onFocus(this)" onblur="onBlur(this)" type="text" id="fName">
+    <br>
+    <script>
+        function mDown(a) {
+            a.style.backgroundColor = "yellow";
+            a.innerHTML = "Thank You";
+        }
+        function mUp(a) {
+            a.style.backgroundColor = "red";
+            a.innerHTML = "Click";
+        }
+        function mOver(a) {
+            console.log(a);
+            a.innerHTML = "Thank You";
+        }
+        function mOut(a) {
+            console.log(a);
+            a.innerHTML = "MouseOver";
+        }
+        function onFocus(a) {
+            a.style.backgroundColor = "yellow";
+        }
+        function onBlur(a) {
+            a.style.backgroundColor = "white";
+        }
+    </script>
+</body>
+
+</html>

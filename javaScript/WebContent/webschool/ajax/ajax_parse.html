@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var xhtp = new XMLHttpRequest();
+        xhtp.onreadystatechange = function() {
+            if(xhtp.readyState == 4 && xhtp.status == 200) {
+               // console.log(this.responseText);
+               var obj = JSON.parse(this.responseText);
+               console.log(obj);
+            //    console.log("name=>", obj.name);
+            //    console.log("age=>", obj.age);
+            //    console.log("pets=>", obj.pets[0].animal, obj.pets[0].name);
+            }
+        }
+        xhtp.open("get", "MOCK_DATA.json");
+        xhtp.send();
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../jquery/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("input:button").on("click", function() {
+			var params = $("#frm").serialize();
+			console.log(params);
+			$.ajax({
+				url:"../../InsertEmpSev",
+				type:"post",
+				data:params,
+				success: function() {
+					 location.href ="listEmployee.html";
+					console.log("success");
+				}
+			});
+		})
+	})
+</script>
+</head>
+<body>
+	<a href ="listEmployee.html">리스트</a><br><br>
+	<form id="frm" action="">
+	firstName :<input type="text" name="firstName">
+	<br> 
+	lastName :<input type="text" name="lastName">
+	<br> 
+	Email :<input type="email" name="email">
+	<br> 
+	HireDate :<input type="date" name="hireDate">
+	<br> 
+	job :<input type="text" name="jobId" value="IT_PROG">
+	<br> 
+	Salary :<input type="text" name="salary" value="1000">
+	<br>
+	<input type="button" value="입력">
+	</form>
+
+</body>
+</html>

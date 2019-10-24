@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "show"></div>
+    <div id = "arrow"></div>
+   <script>
+     var cars = ['Saab', 'Volvo', 'BMW', 'Benz'];
+     for (var i=0; i<car.length;) {
+         console.log(cars[i++]);
+     }
+     console.log("====================================")
+     var flowers = new Array('sunflower', 'rose', 'lily', 'tulip');
+     var j = 0;
+     for (; j < flowers.length;) {
+         console.log(flowers[j++]);
+     }
+     flowers[0] = 'moonflower';
+     var text = "<ul>";
+     for(i=0; flowers.length;) {
+         text += "<li>" + flowers[j++] + "</li>";
+     }
+     text += "</ul>";
+     document.getElementById("show").innerHTML = text;
+        </script>
+    
+</body>
+</html>

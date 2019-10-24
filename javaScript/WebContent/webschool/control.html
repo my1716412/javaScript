@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+    </style>
+    <script>
+        function showTable() {
+            document.write("<table border=1>");
+            for (var i = 0; i < 10; i++) {
+                if (i % 2 == 0) {
+                    document.write("<tr style='background-color:red'>");
+                } else {
+                    document.write("<tr  style='background-color:blue'>");
+                }
+                document.write("<td>" + i + "</td></tr>");
+            }
+            document.write("</table>");
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr class="red">
+            <td>hi</td>
+        </tr>
+        <tr class="blue">
+            <td>hi</td>
+        </tr>
+    </table>
+    <button onclick="showTable()">click</button>
+</body>
+
+</html>

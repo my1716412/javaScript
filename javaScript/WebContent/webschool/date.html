@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="cal"><h3></h3></div>
+    <script>
+        document.getElementById("cal").innerHTML ="<h3>Nice World</h3>";
+        // console.logdocument(document.getElementById("cal").innerText);
+        // var mon = getCal(2019, 10);
+        function getCal(y, m) {
+            // var tMonth = m -1;
+            var l = new Date(y,(m-1), 1); 
+            var d = new Date(y, m, 0); 
+            console.log(m + "월의 1일이 시작되는 위치: ", l.getDay());
+            console.log(m + "월의 마지막날 : ", d.getDate());
+            var tag = "<h3>" + y + "년" + m + "월s</h3>";
+            // console.log(d.getFullYear() + "년" + (d.getMonth() + 1) + "월" + d.getDate() + "일" + d.getDay());
+            var tag = "<br><table border=1>";
+            tag += "<tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr>"
+            tag += "<tr>";
+            var skipDay = 0;
+            for (; skipDay < l.getDay(); skipDay++) {
+                tag += "<td>" + "*" + "</td>";
+            }
+            for (var i = 1; i <= d.getDate(); i++) {
+                tag += "<td>" + i + "</td>"
+                if ((skipDay + i) % 7 == 0) {
+                    tag += "</tr><tr>";
+                }
+            }
+            tag += "</tr></table>";
+            // document.getElementById("cal").innerHTML = tag;
+            return tag;
+        }
+        
+    </script>
+</body>
+
+</html>

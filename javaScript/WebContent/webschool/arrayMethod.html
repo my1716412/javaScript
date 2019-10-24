@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    //pop(last), shift(first)  값을 빼줌
+    var len = fruits.length;
+    // for(var i=0; i<len; i++) {
+    //     console.log(fruits.join(",")); //banana, orange, apple, mango
+    //     fruits.shift();
+    // }
+    // push, unshift
+    fruits.push("Kiwi");
+    fruits.unshift("Strawberry")
+    console.log(fruits.join("-"));
+
+    fruits[fruits.length] = "Melon";
+    fruits[fruits.length] = "Grape";
+    fruits[10] = "Lemon";
+    console.log(fruits.join(","));
+
+    </script>
+</body>
+</html>
